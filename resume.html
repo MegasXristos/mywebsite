@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <!-- Füge html2pdf.js hinzu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inhalt deiner Seite -->
+    <h1>Willkommen auf meiner Seite!</h1>
+    <p>Hier ist etwas Inhalt, den du als PDF speichern kannst.</p>
+
+    <!-- Button zum PDF-Download -->
+    <button id="downloadPDF" class="download-button">Download als PDF</button>
+
+    <script>
+        document.getElementById('downloadPDF').addEventListener('click', function() {
+            // Wähle das Element, das du als PDF speichern möchtest (hier das gesamte Dokument)
+            var element = document.body; // Du kannst hier auch ein spezifisches Element angeben
+
+            // Optionen für die PDF-Konvertierung
+            var opt = {
+                margin:       1,
+                filename:     'meine_seite.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+
+            // Konvertiere das Element in eine PDF-Datei und speichere sie
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+ #profilpicture {
+  border-radius: 25px;
+}
+
+#smallprofil {
+  border-radius: 0px;
+}
+
+.button {
+  position: relative;
+  background-color: #606568;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  padding: 5px;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button:hover {background-color: #989898}
+
+.button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 200%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -60%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.button2{
+  position: relative;
+  background-color: #606568;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  color: #000000;
+  padding: 5px;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button2:hover {background-color: #989898}
+
+.button2:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 200%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -60%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.button2:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
