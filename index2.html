@@ -1,0 +1,311 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Developer - Christos Tsiparidis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/116b8af4c7.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+<body class="w3-white">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img id="smallprofil" src="./assets/src/profilname.jpeg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
+    <i class="fa fa-home w3-xlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
+    <i class="fa fa-user w3-xlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
+    <!--<i class="fa fa-eye w3-xxlarge"></i>-->
+    <i class="fa-solid fa-business-time fa-2xl"></i>
+    <p>PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
+    <i class="fa fa-envelope w3-xlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    
+    <h1 class="w3-xxlarge">Christos Tsiparidis</h1>
+    <h1 class="w3-xlarge">Software Developer</h1>
+    <img id="profilpicture"  src="./assets/src/profilname.jpeg" alt="picture" class="w3-image" width="500" height=auto>
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-grey">About me</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>I have been passionate about programming for 12 years, starting with HTML to create my very first website. This initial experience sparked an endless fascination with web development, inspiring me to continually explore and enhance my skills. 
+      </br></br>Initially, I started my career in the industrial sector, where I developed a deep appreciation for processes and efficiency before transitioning to IT, where I discovered my true appeal for technology and innovation.
+                </br></br>In the business world, I discovered my desire to automate mundane tasks using VBA, Python, and C#. Diving deeper into automation, I became captivated by the ability to innovate complex solutions, resulting in robust and efficient outcomes.
+                In my role, my focus was on creating and optimizing IT service offerings. I coordinated order processing, managed service configurations in the area of asset management, and efficiently handled incoming invoices. Determining the needs for IT services for customer orders was also part of my responsibilities.
+                I implemented automation solutions that served to improve processes. In doing so, I optimized workflows, visualized information, and automated subprocesses.
+      
+      </br></br>My passion extends from frontend development to automation, and ultimately to full stack development. I focus on backend database solutions to build dynamic websites essential for modern business operations.
+      I am expanding my knowledge by utilizing a wider range of technologies to achieve full-stack development proficiency. This continuous learning and adaptation allow me to stay current with industry trends and enhance my capabilities in delivering comprehensive solutions.
+      </br></br>My journey is driven by a continuous quest for knowledge and improvement in the tech field.
+    
+    
+    </p>
+    <h3 class="w3-padding-16 w3-text-grey">My Skills</h3>
+    <p class="w3-wide">C#</p>
+    <div class="w3-light-grey">
+      <div class="w3-purple" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">React</p>
+    <div class="w3-light-grey">
+      <div class="w3-cyan" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">JavaScript</p>
+    <div class="w3-light-grey">
+      <div class="w3-yellow" style="height:28px;width:80%"></div>
+    </div>
+    <p class="w3-wide">HTML & CSS</p>
+    <div class="w3-light-grey">
+      <div class="w3-red" style="height:28px;width:70%"></div>
+    </div>
+    <p class="w3-wide">Python</p>
+    <div class="w3-light-grey">
+      <div class="w3-lime" style="height:28px;width:80%"></div>
+    </div>
+    <p class="w3-wide">VBA Excel</p>
+    <div class="w3-light-grey">
+      <div class="w3-green" style="height:28px;width:90%"></div>
+    </div>
+    <p class="w3-wide">SQL</p>
+    <div class="w3-light-grey">
+    <div class="w3-indigo" style="height:28px;width:80%"></div>
+    </div>
+    <br>
+
+
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey">
+      <div class="w3-half w3-section">
+        <span class="w3-large">3+</span><br>
+        Partners
+      </div>
+      <div class="w3-half w3-section">
+        <span class="w3-large">30+</span><br>
+        Projects Done
+      </div>
+    </div>
+<center>
+    <button id="downloadPDF" class="download-button buttonwhitemode">
+      Download Resume
+      
+    </button>
+    </center>
+    
+    
+
+  
+  <!-- Portfolio Section -->
+  <div class="w3-padding-64 w3-content" id="photos">
+    <h2 class="w3-text-light-grey">My Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- Grid for photos -->
+    
+
+   
+      <div class="w3-row-padding" >
+      <div class="w3-half">
+      <img id="profilpicture" src="./assets/src/process.png" style="width:100%" >
+      </div>
+      <div class="w3-half">
+        <p class="w3-content w3-justify w3-text-grey">In my previous position, I managed the procurement of manufacturer services within maintenance contracts. This involved creating quotations, processing orders, asset management, and data maintenance, with a focus on determining customer needs and creating service offerings using the manufacturer's tool.
+
+I handled service orders according to manufacturer quotations, managed internal order approvals, linked chassis and modules, updated addresses, resolved incidents, and handled invoice matters.
+
+I also focused on security, datacenter, and workplace services, reviewing order requests, creating service orders, adjusting payment terms, registering care packs, and forwarding license documents.
+
+Maintaining reinsurance data was crucial. I communicated with relevant interfaces and the manufacturer to clarify issues, obtain approvals for additional costs, and report data discrepancies for necessary adjustments.
+
+I contributed to discussions on changes in services, products, and processes, addressing current challenges in team meetings. My professional skills, training, and experience in procurement and administration, coupled with strong communication skills and proficiency in office applications, enabled me to work independently, stay organized, and prioritize tasks effectively. My reliability, resilience, and team orientation ensured my success in this role.</p>
+      </div>      
+    <!-- End photo grid -->
+    </div>
+
+    </br></br></br>
+
+    <div class="w3-row-padding">
+      <div class="w3-half">
+      <img id="profilpicture" src="./assets/src/vba_pic_1.png" style="width:100%">
+      </div>
+      <div class="w3-half">
+        <p class="w3-content w3-justify w3-text-grey">In addition to my main duties, I leveraged over three years of programming experience in VBA, Python, and C# to implement practical automation solutions.
+
+My focus was on optimizing workflows by automating subprocesses for the entire team. I improved equipment visualization for better clarity and automated data entry in SAP for ordering tasks, speeding up the process.
+
+Analyzing dedicated emails allowed me to conduct valuable data analyses. These insights led to organizational process adjustments, accelerating workflows. Automating collected data turned diverse information into actionable insights.
+
+I also implemented an automated process in MS Outlook for email cleanup and process step alignment, enhancing email management efficiency.
+
+Additionally, I automated the transfer of order values from SAP to Excel, ensuring efficient data capture for further analysis or reporting. This automation made data collection and analysis more effective and reduced workload.</p>
+      </div>      
+    <!-- End photo grid -->
+    </div>
+
+</br></br></br>
+    <div class="w3-row-padding">
+      <div class="w3-half">
+      <img id="profilpicture" src="./assets/src/automation_pic.png" style="width:100%">
+      </div>
+      <div class="w3-half">
+        <p class="w3-content w3-justify w3-text-grey">My automation skills are demonstrated in a project aimed at improving email evaluation and categorization. I extract, analyze, and categorize emails, creating a dropdown menu for email categories based on subject keywords and sorting emails by date and category.
+
+For data visualization, I dynamically generate sheets with category counts and add pie charts to show category distribution per year. I ensure user-friendly data presentation with validation, filtering, and auto column adjustment.
+
+This project highlights my ability to handle complex data, automate office tasks, visualize data, and efficiently manage information.</p>
+      </div>      
+    <!-- End photo grid -->
+    </div>
+
+
+
+
+</br></br></br>
+    <div class="w3-row-padding">
+      <div class="w3-half">
+      <img id="profilpicture" src="./assets/src/automation_pic_colored.png" style="width:100%">
+      </div>
+      <div class="w3-half">
+        <p class="w3-content w3-justify w3-text-grey">The project aims to develop an OnBoarding app to support new employees during their orientation phase.
+
+The app will help organize tasks, track progress, and ensure the complete capture of relevant information and tasks. Both new employees and their supervisors can input specific onboarding tasks and update their status to keep track of completed or pending activities. Each task can include important resources and information.
+
+A key feature of the app is a platform for feedback and communication between new employees and their mentors. An integrated progress overview will allow both parties to transparently follow the onboarding process.
+
+The app ensures continuous access to tasks and information for easy reference at any time.
+
+The goals are a structured and organized onboarding process, enhanced communication, and better time management. The app's constant availability and easy access to information and tasks contribute to a smooth and successful onboarding experience.
+
+Equipped with these tools, the OnBoarding app will become an essential part of the onboarding process, ensuring new employees are effectively and successfully integrated into the company.</p>
+      </div>      
+    <!-- End photo grid -->
+    </div>
+
+
+  <!-- End Portfolio Section -->
+  </div>
+
+
+    <div class="w3-row-padding">
+      <div class="w3-half">
+      <img id="profilpicture" src="./assets/src/automation_pic_colored_1.png" style="width:100%">
+      </div>
+      <div class="w3-half">
+        <p class="w3-content w3-justify w3-text-grey">I analyzed the export file from the manufacturer's tool and adjusted the macro I had previously developed for this internal client.
+
+This adjustment was necessary due to changes made by the manufacturer to the tool.
+
+The goal was to optimize the presentation of the services and ensure the smooth operation of the automated subprocess.
+
+Through these targeted adjustments, the services were structured and organized to provide current information that can be directly used to create a service offer.
+
+These measures have not only increased efficiency but also improved the accuracy and reliability of data delivery, which is crucial for the prompt processing and successful completion of service orders.</p>
+      </div>      
+    <!-- End photo grid -->
+    </div>
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-grey">Contact Me</h2>
+
+    <p>Let's get in touch. Send me an  <a href="mailto:christos.tsiparidis@live.de"><button class="button">E-Mail</button></a></p>
+
+
+
+
+
+<p></p>
+
+
+
+
+
+  <!-- End Contact Section -->
+  </div>
+
+  
+
+<!--
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+ <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+ <a class="w3-button w3-round-xxlarge w3-small w3-light-grey" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> 
+-->
+
+
+ <footer class="w3-content w3-padding-64 w3-text-grey w3-medium">
+ <p>©  <script type="text/javascript">
+var d = new Date()
+document.write(d.getFullYear())
+</script>
+by Christos Tsiparidis</p>
+</footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+    <script>
+        document.getElementById('downloadPDF').addEventListener('click', function() {
+            // Wähle das Element, das du als PDF speichern möchtest (hier das gesamte Dokument)
+            var element = document.body; // Du kannst hier auch ein spezifisches Element angeben
+
+            // Optionen für die PDF-Konvertierung
+            var opt = {
+                margin:       1,
+                filename:     'Resume - Christos Tsiparidis.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+            };
+
+            // Konvertiere das Element in eine PDF-Datei und speichere sie
+            html2pdf().set(opt).from(element).save();
+        });
+    </script>
+</body>
+</html>

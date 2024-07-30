@@ -18,6 +18,102 @@
     #main {margin-left: 120px}
     /* Remove margins from "page content" on small screens */
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+        .light-mode div, .light-mode h2{
+            background-color: white;
+            color: black;
+        }
+        .light-mode h2{
+            background-color: white;
+            color: black;
+        }
+        .light-mode .w3-sidebar {
+            background-color: #f0f0f0;
+            color: black;
+        }
+        .light-mode .w3-black {
+            background-color: white !important;
+            color: black !important;
+        }
+        .light-mode .w3-text-grey {
+            color: black !important;
+        }
+        .light-mode .w3-grey {
+            background-color: #ccc !important;
+        }
+        .light-mode .w3-button {
+            background-color: #e7e7e7 !important;
+            color: black !important;
+        }
+        .light-mode h2.w3-text-light-grey {
+            color: black !important;
+        }
+        .light-mode h3.w3-padding-16.w3-text-light-grey {
+            color: black !important;
+        }
+        .light-mode .w3-hover-opacity-off:hover {
+          background-color: black !important;
+          color: white !important;
+        }
+        .light-mode .w3-bar-item:hover {
+          background-color: black !important;
+          color: white !important;
+        }
+
+
+        .light-mode .w3-white {
+            background-color: lightgrey !important;
+        }
+
+        .light-mode .button {
+            position: relative;
+            background-color: black;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            color: white;
+            padding: 5px;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+          }
+          .light-mode .button:hover {background-color: grey}
+
+            .light-mode .button2 {
+            position: relative;
+            background-color: black;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            color: white;
+            padding: 5px;
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            transition-duration: 0.4s;
+            text-decoration: none;
+            overflow: hidden;
+            cursor: pointer;
+          }
+          .light-mode .button2:hover {background-color: grey}
+          
+          .light-mode hr {
+            background-color:black;
+        }
+
+        .light-mode .w3-section{
+          background-color:lightgrey;
+        }
+
+        .light-mode .light-section{
+          background-color:green;
+        }
+
+
+
     </style>
     <link rel="stylesheet" href="./styles.css">
   </head>
@@ -44,6 +140,9 @@
     <i class="fa fa-envelope w3-xlarge"></i>
     <p>CONTACT</p>
   </a>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off" onclick="toggleTheme()">
+    <i class="fa-solid fa-sun fa-beat w3-xlarge"></i>
+  </a>
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -51,7 +150,7 @@
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
   </div>
 </div>
@@ -60,7 +159,6 @@
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-xxlarge">I'm</h1>
     <h1 class="w3-xxlarge">Christos Tsiparidis</h1>
     <h1 class="w3-xlarge">Software Developer</h1>
     <img id="profilpicture"  src="./assets/src/profilname.jpeg" alt="picture" class="w3-image" width="500" height=auto>
@@ -79,7 +177,7 @@
       </br></br>My passion extends from frontend development to automation, and ultimately to full stack development. I focus on backend database solutions to build dynamic websites essential for modern business operations.
       I am expanding my knowledge by utilizing a wider range of technologies to achieve full-stack development proficiency. This continuous learning and adaptation allow me to stay current with industry trends and enhance my capabilities in delivering comprehensive solutions.
       </br></br>My journey is driven by a continuous quest for knowledge and improvement in the tech field.
-    
+
     
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
@@ -114,7 +212,7 @@
     <br>
 
 
-    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey">
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey light-section">
       <div class="w3-half w3-section">
         <span class="w3-large">3+</span><br>
         Partners
@@ -145,7 +243,7 @@
    
       <div class="w3-row-padding" >
       <div class="w3-half">
-      <img id="profilpicture" src="./assets/src/process.png" style="width:100%" >
+      <img id="profilpicture" src="./assets/src/automation_pic_colored.png" style="width:100%" >
       </div>
       <div class="w3-half">
         <p class="w3-content w3-justify w3-text-grey">In my previous position, I managed the procurement of manufacturer services within maintenance contracts. This involved creating quotations, processing orders, asset management, and data maintenance, with a focus on determining customer needs and creating service offerings using the manufacturer's tool.
@@ -202,7 +300,7 @@ This project highlights my ability to handle complex data, automate office tasks
 </br></br></br>
     <div class="w3-row-padding">
       <div class="w3-half">
-      <img id="profilpicture" src="./assets/src/automation_pic_colored.png" style="width:100%">
+      <img id="profilpicture" src="./assets/src/process.png" style="width:100%">
       </div>
       <div class="w3-half">
         <p class="w3-content w3-justify w3-text-grey">The project aims to develop an OnBoarding app to support new employees during their orientation phase.
@@ -306,6 +404,15 @@ by Christos Tsiparidis</p>
             // Konvertiere das Element in eine PDF-Datei und speichere sie
             html2pdf().set(opt).from(element).save();
         });
+
+
+          function toggleTheme() {
+            var element = document.body;
+            element.classList.toggle("light-mode");
+          }
+
+
+
     </script>
 </body>
 </html>
