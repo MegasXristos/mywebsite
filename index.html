@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Developer - Christos Tsiparidis</title>
+    <title>Software Developer - Christos Tsiparidis</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" href="./assets/src/icons8-favicon-50.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/116b8af4c7.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>    
     <style>
     body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
@@ -59,6 +63,13 @@
           color: white !important;
         }
 
+        
+        /*.light-mode .max-w-md{
+          background-color: black !important;
+        }
+        */
+
+
 
         .light-mode .w3-white {
             background-color: lightgrey !important;
@@ -104,10 +115,23 @@
             background-color:black;
         }
 
+
+
+        .light-mode .w3-section:hover {
+            background-color: grey;
+            color: white;
+        } 
+
+        .light-mode .w3-section {
+            background-color: lightgrey;
+        } 
+
     </style>
     <link rel="stylesheet" href="./styles.css">
+
   </head>
 <body class="w3-black">
+
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -117,19 +141,23 @@
     <i class="fa fa-home w3-xlarge"></i>
     <p>HOME</p>
   </a>
+  
   <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
     <i class="fa fa-user w3-xlarge"></i>
     <p>ABOUT</p>
   </a>
+  
   <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
     <!--<i class="fa fa-eye w3-xxlarge"></i>-->
     <i class="fa-solid fa-business-time fa-2xl"></i>
     <p>PROJECTS</p>
   </a>
+  
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
     <i class="fa fa-envelope w3-xlarge"></i>
     <p>CONTACT</p>
   </a>
+  
     <a class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off" onclick="toggleTheme()">
     <i class="fa-solid fa-circle-half-stroke fa-fade w3-xlarge"></i>
   </a>
@@ -140,7 +168,7 @@
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-tiny">
     <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:20% !important">PHOTOS</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
     <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
     <a class="w3-bar-item w3-button" style="width:20% !important" onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke fa-fade w3-small"></i></a>
   </div>
@@ -152,13 +180,14 @@
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
     <h1 class="w3-xxlarge">Christos Tsiparidis</h1>
     <h1 class="w3-xlarge">Software Developer</h1>
-    <img id="profilpicture"  src="./assets/src/profilname.jpeg" alt="picture" class="w3-image" width="500" height=auto>
+    <center><img id="profilpicture"  src="./assets/src/profilname.jpeg" alt="picture" class="w3-image" width="500" height=auto><center>
   </header>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About me</h2>
+    <h2 class="w3-text-light-grey" style="font-size:30px">About me</h2>
     <hr style="width:200px" class="w3-opacity">
+    </br>
     <p>I have been passionate about programming for 12 years, starting with HTML to create my very first website. This initial experience sparked an endless fascination with web development, inspiring me to continually explore and enhance my skills. 
       </br></br>Initially, I started my career in the industrial sector, where I developed a deep appreciation for processes and efficiency before transitioning to IT, where I discovered my true appeal for technology and innovation.
                 </br></br>In the business world, I discovered my desire to automate mundane tasks using VBA, Python, and C#. Diving deeper into automation, I became captivated by the ability to innovate complex solutions, resulting in robust and efficient outcomes.
@@ -171,35 +200,47 @@
 
     
     </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    </br></br>
+
+    <h2 class="w3-text-light-grey" style="font-size:30px">My Skills</h2>
+    <hr style="width:200px" class="w3-opacity">
+    </br>
     <p class="w3-wide">C#</p>
     <div class="w3-white">
       <div class="w3-purple" style="height:28px;width:95%"></div>
     </div>
+    </br>
     <p class="w3-wide">React</p>
     <div class="w3-white">
       <div class="w3-cyan" style="height:28px;width:85%"></div>
     </div>
+    </br>
     <p class="w3-wide">JavaScript</p>
     <div class="w3-white">
       <div class="w3-yellow" style="height:28px;width:80%"></div>
     </div>
+    </br>
     <p class="w3-wide">HTML & CSS</p>
     <div class="w3-white">
-      <div class="w3-red" style="height:28px;width:70%"></div>
+      <div class="w3-red" style="height:28px;width:90%"></div>
     </div>
+    </br>
     <p class="w3-wide">Python</p>
     <div class="w3-white">
       <div class="w3-lime" style="height:28px;width:80%"></div>
     </div>
+    </br>
     <p class="w3-wide">VBA Excel</p>
     <div class="w3-white">
       <div class="w3-green" style="height:28px;width:90%"></div>
     </div>
+    </br>
     <p class="w3-wide">SQL</p>
     <div class="w3-white">
     <div class="w3-indigo" style="height:28px;width:80%"></div>
     </div>
+    
+
     <br>
 
    <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey">
@@ -214,20 +255,22 @@
     </div>
 
 
+<!--
 <center>
     <button id="downloadPDF" class="download-button button2">
       Download Resume
       
     </button>
     </center>
-    
+-->
     
 
   
   <!-- Portfolio Section -->
   <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">My Projects</h2>
+    <h2 class="w3-text-light-grey" style="font-size:30px">My Projects</h2>
     <hr style="width:200px" class="w3-opacity">
+    </br>
 
     <!-- Grid for photos -->
     
@@ -238,6 +281,7 @@
       <img id="profilpicture" src="./assets/src/automation_pic_colored.png" style="width:100%" >
       </div>
       <div class="w3-half">
+        <p class="w3-xlarge">Streamlining & Procurement</p>
         <p class="w3-content w3-justify w3-text-grey">In my previous position, I managed the procurement of manufacturer services within maintenance contracts. This involved creating quotations, processing orders, asset management, and data maintenance, with a focus on determining customer needs and creating service offerings using the manufacturer's tool.
 
 I handled service orders according to manufacturer quotations, managed internal order approvals, linked chassis and modules, updated addresses, resolved incidents, and handled invoice matters.
@@ -258,7 +302,8 @@ I contributed to discussions on changes in services, products, and processes, ad
       <img id="profilpicture" src="./assets/src/vba_pic_1.png" style="width:100%">
       </div>
       <div class="w3-half">
-        <p class="w3-content w3-justify w3-text-grey">In addition to my main duties, I leveraged over three years of programming experience in VBA, Python, and C# to implement practical automation solutions.
+        <p class="w3-xlarge">Automation & Optimization</p>
+        <p class="w3-content w3-justify w3-text-grey">In addition to my main duties, I leveraged programming experience in VBA, Python, and C# to implement practical automation solutions.
 
 My focus was on optimizing workflows by automating subprocesses for the entire team. I improved equipment visualization for better clarity and automated data entry in SAP for ordering tasks, speeding up the process.
 
@@ -266,7 +311,7 @@ Analyzing dedicated emails allowed me to conduct valuable data analyses. These i
 
 I also implemented an automated process in MS Outlook for email cleanup and process step alignment, enhancing email management efficiency.
 
-Additionally, I automated the transfer of order values from SAP to Excel, ensuring efficient data capture for further analysis or reporting. This automation made data collection and analysis more effective and reduced workload.</p>
+Additionally, I automated the transfer of order values from Excel to SAP, ensuring efficient data capture for further analysis or reporting. This automation made data collection and analysis more effective and reduced workload.</p>
       </div>      
     <!-- End photo grid -->
     </div>
@@ -277,6 +322,7 @@ Additionally, I automated the transfer of order values from SAP to Excel, ensuri
       <img id="profilpicture" src="./assets/src/automation_pic.png" style="width:100%">
       </div>
       <div class="w3-half">
+        <p class="w3-xlarge">Boost & Data Visualization</p>
         <p class="w3-content w3-justify w3-text-grey">My automation skills are demonstrated in a project aimed at improving email evaluation and categorization. I extract, analyze, and categorize emails, creating a dropdown menu for email categories based on subject keywords and sorting emails by date and category.
 
 For data visualization, I dynamically generate sheets with category counts and add pie charts to show category distribution per year. I ensure user-friendly data presentation with validation, filtering, and auto column adjustment.
@@ -295,6 +341,7 @@ This project highlights my ability to handle complex data, automate office tasks
       <img id="profilpicture" src="./assets/src/process.png" style="width:100%">
       </div>
       <div class="w3-half">
+        <p class="w3-xlarge">Onboarding & Integration</p>
         <p class="w3-content w3-justify w3-text-grey">The project aims to develop an OnBoarding app to support new employees during their orientation phase.
 
 The app will help organize tasks, track progress, and ensure the complete capture of relevant information and tasks. Both new employees and their supervisors can input specific onboarding tasks and update their status to keep track of completed or pending activities. Each task can include important resources and information.
@@ -320,6 +367,7 @@ Equipped with these tools, the OnBoarding app will become an essential part of t
       <img id="profilpicture" src="./assets/src/automation_pic_colored_1.png" style="width:100%">
       </div>
       <div class="w3-half">
+        <p class="w3-xlarge">Enhancement & Data Accuracy</p>
         <p class="w3-content w3-justify w3-text-grey">I analyzed the export file from the manufacturer's tool and adjusted the macro I had previously developed for this internal client.
 
 This adjustment was necessary due to changes made by the manufacturer to the tool.
@@ -331,21 +379,56 @@ Through these targeted adjustments, the services were structured and organized t
 These measures have not only increased efficiency but also improved the accuracy and reliability of data delivery, which is crucial for the prompt processing and successful completion of service orders.</p>
       </div>      
     <!-- End photo grid -->
-    </div>
 
 
 
+ 
   <!-- Contact Section -->
+  <!--
   <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
     <h2 class="w3-text-light-grey">Contact Me</h2>
 
     <p>Let's get in touch. Send me an  <a href="mailto:christos.tsiparidis@live.de"><button class="button">E-Mail</button></a></p>
+-->
+</div>
 
+</br></br></br>
 
+        <div class="container mx-auto" id="contact">
+            <div class="max-w-md mx-auto my-10 bg-zinc-900 p-5 rounded-md shadow-sm">
+                <div class="text-center">
+                    <h1 class="my-3 text-3xl font-semibold text-gray-500">Contact Me</h1>
+                    <p class="text-gray-400">Fill up the form below to send me a message.</p>
+                </div>
+                <div class="m-7">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="9cdb278c-2d80-4da5-9d68-185b5cffee59" />
+                        <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                        <input type="checkbox" name="botcheck" style="display: none;" />
 
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 text-sm text-gray-400" >Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none focus:ring focus:border-blue-200" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm text-gray-400">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none focus:ring focus:border-blue-200" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm text-gray-400">Your Message</label>
+                            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none focus:ring focus:border-blue-200" required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <button type="submit" class="w-full bg-stone-600 text-white py-4 px-4 rounded-sm hover:bg-blue-500 focus:outline-none">
+                                Send Message
+                            </button>
+                        </div>
+                        <p class="text-base text-center text-gray-400" id="result"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-
-<p></p>
 
 
 
@@ -379,6 +462,9 @@ by Christos Tsiparidis</p>
 <!-- END PAGE CONTENT -->
 </div>
 
+
+
+
     <script>
         document.getElementById('downloadPDF').addEventListener('click', function() {
             // Wähle das Element, das du als PDF speichern möchtest (hier das gesamte Dokument)
@@ -406,5 +492,6 @@ by Christos Tsiparidis</p>
 
 
     </script>
+    <script src="./emailForm.js"></script>    
 </body>
 </html>
