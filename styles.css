@@ -111,3 +111,42 @@
 }
 
 
+
+
+
+
+
+
+/* Adjust the header section to ensure text and image are correctly displayed */
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Adjust the padding to fit smaller screens */
+  text-align: center; /* Center align text */
+}
+
+h1.text-container {
+  margin: 0;
+  color: white; /* Ensure text color is visible on a black background */
+  font-size: 2rem; /* Adjust as needed */
+}
+
+img#profilpicture {
+  max-width: 80%; /* Scale image down on larger screens */
+  height: auto;
+}
+
+/* For responsiveness */
+@media only screen and (max-width: 768px) {
+  h1.text-container {
+    font-size: 1.5rem; /* Smaller text size for smaller screens */
+  }
+
+  img#profilpicture {
+    max-width: 100%;
+  }
+}
+
