@@ -9,7 +9,7 @@ form.addEventListener("submit", function (e) {
     object[key] = value;
   });
   var json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
+  result.innerHTML = "Sending your request...";
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
@@ -22,12 +22,14 @@ form.addEventListener("submit", function (e) {
     .then(async (response) => {
       let json = await response.json();
       if (response.status == 200) {
-        result.innerHTML = json.message;
+        //result.innerHTML = json.message;
+        result.innerHTML = "Thank you! Your request has been successfully sent.";
         result.classList.remove("text-gray-500");
         result.classList.add("text-green-500");
       } else {
         console.log(response);
-        result.innerHTML = json.message;
+        //result.innerHTML = json.message;
+        result.innerHTML = "Oops! There was an error sending your request. Please try again.";
         result.classList.remove("text-gray-500");
         result.classList.add("text-red-500");
       }

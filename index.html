@@ -4,6 +4,7 @@
     <title>Software Developer - Christos Tsiparidis</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" type="image/png" href="./assets/src/icons8-favicon-50.png" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,7 +64,17 @@
           color: white !important;
         }
 
-        
+          /* Ensure the header takes up the full viewport height */
+#home {
+  height: 100vh; /* 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+
         /*.light-mode .max-w-md{
           background-color: black !important;
         }
@@ -136,7 +147,7 @@
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img id="smallprofil" src="./assets/src/profilname.jpeg" style="width:100%">
+  <img id="smallprofil" src="./assets/src/developer.png" style="width:100%">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
     <i class="fa fa-home w3-xlarge"></i>
     <p>HOME</p>
@@ -155,7 +166,7 @@
   
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off">
     <i class="fa fa-envelope w3-xlarge"></i>
-    <p>CONTACT</p>
+    <p>Access</p>
   </a>
   
     <a class="w3-bar-item w3-button w3-padding-large w3-hover-opacity-off" onclick="toggleTheme()">
@@ -169,7 +180,7 @@
     <a href="#" class="w3-bar-item w3-button" style="width:20% !important">HOME</a>
     <a href="#about" class="w3-bar-item w3-button" style="width:20% !important">ABOUT</a>
     <a href="#photos" class="w3-bar-item w3-button" style="width:20% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">CONTACT</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:20% !important">ACCESS</a>
     <a class="w3-bar-item w3-button" style="width:20% !important" onclick="toggleTheme()"><i class="fa-solid fa-circle-half-stroke fa-fade w3-small"></i></a>
   </div>
 </div>
@@ -178,13 +189,17 @@
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-xxlarge">Christos Tsiparidis</h1>
-    <h1 class="w3-xlarge">Software Developer</h1>
-    <center><img id="profilpicture"  src="./assets/src/profilname.jpeg" alt="picture" class="w3-image" width="500" height=auto><center>
+    <h1 class="w3-xxlarge" class="text-container">Christos Tsiparidis</h1>
+    <h1 class="w3-xlarge" class="text-container">Software Developer</h1>
+    </br>
+    <div data-aos="fade-up"
+     data-aos-duration="2000">
+    <center><img id="profilpicture"  src="./assets/src/developer.png" alt="picture" class="w3-image" width="500" height=auto><center>
+    </div>
   </header>
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-content w3-justify w3-text-grey" id="about" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000" style="padding-top: 120px;">
     <h2 class="w3-text-light-grey" style="font-size:30px">About me</h2>
     <hr style="width:200px" class="w3-opacity">
     </br>
@@ -205,45 +220,50 @@
     <h2 class="w3-text-light-grey" style="font-size:30px">My Skills</h2>
     <hr style="width:200px" class="w3-opacity">
     </br>
-    <p class="w3-wide">C#</p>
-    <div class="w3-white">
+    <p class="w3-wide">.NET C#</p>
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
       <div class="w3-purple" style="height:28px;width:95%"></div>
     </div>
     </br>
+        <p class="w3-wide">ASP.NET Core</p>
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
+      <div class="w3-deep-purple" style="height:28px;width:85%"></div>
+    </div>
+    </br>
     <p class="w3-wide">React</p>
-    <div class="w3-white">
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
       <div class="w3-cyan" style="height:28px;width:85%"></div>
     </div>
     </br>
-    <p class="w3-wide">JavaScript</p>
-    <div class="w3-white">
-      <div class="w3-yellow" style="height:28px;width:80%"></div>
-    </div>
-    </br>
     <p class="w3-wide">HTML & CSS</p>
-    <div class="w3-white">
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
       <div class="w3-red" style="height:28px;width:90%"></div>
     </div>
     </br>
-    <p class="w3-wide">Python</p>
-    <div class="w3-white">
-      <div class="w3-lime" style="height:28px;width:80%"></div>
+    <p class="w3-wide">JavaScript</p>
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
+      <div class="w3-yellow" style="height:28px;width:80%"></div>
     </div>
     </br>
-    <p class="w3-wide">VBA Excel</p>
-    <div class="w3-white">
+        <p class="w3-wide">VBA Excel</p>
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
       <div class="w3-green" style="height:28px;width:90%"></div>
     </div>
     </br>
+    <p class="w3-wide">Python</p>
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
+      <div class="w3-lime" style="height:28px;width:80%"></div>
+    </div>
+    </br>
     <p class="w3-wide">SQL</p>
-    <div class="w3-white">
+    <div class="w3-white" data-aos="fade-right" data-aos-once="false" data-aos-duration="2000">
     <div class="w3-indigo" style="height:28px;width:80%"></div>
     </div>
     
 
     <br>
 
-   <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey">
+   <div class="w3-row w3-center w3-padding-16 w3-section w3-grey w3-hover-light-grey" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
       <div class="w3-half w3-section">
         <span class="w3-large">3+</span><br>
         Partners
@@ -267,7 +287,7 @@
 
   
   <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
+  <div class="w3-padding-64 w3-content" id="photos" style="padding-top: 200px;">
     <h2 class="w3-text-light-grey" style="font-size:30px">My Projects</h2>
     <hr style="width:200px" class="w3-opacity">
     </br>
@@ -277,10 +297,10 @@
 
    
       <div class="w3-row-padding" >
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-down" data-aos-once="false" data-aos-duration="2000">
       <img id="profilpicture" src="./assets/src/automation_pic_colored.png" style="width:100%" >
       </div>
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
         <p class="w3-xlarge">Streamlining & Procurement</p>
         <p class="w3-content w3-justify w3-text-grey">In my previous position, I managed the procurement of manufacturer services within maintenance contracts. This involved creating quotations, processing orders, asset management, and data maintenance, with a focus on determining customer needs and creating service offerings using the manufacturer's tool.
 
@@ -298,10 +318,10 @@ I contributed to discussions on changes in services, products, and processes, ad
     </br></br></br>
 
     <div class="w3-row-padding">
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-down" data-aos-once="false" data-aos-duration="2000">
       <img id="profilpicture" src="./assets/src/vba_pic_1.png" style="width:100%">
       </div>
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
         <p class="w3-xlarge">Automation & Optimization</p>
         <p class="w3-content w3-justify w3-text-grey">In addition to my main duties, I leveraged programming experience in VBA, Python, and C# to implement practical automation solutions.
 
@@ -318,10 +338,10 @@ Additionally, I automated the transfer of order values from Excel to SAP, ensuri
 
 </br></br></br>
     <div class="w3-row-padding">
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-down" data-aos-once="false" data-aos-duration="2000">
       <img id="profilpicture" src="./assets/src/automation_pic.png" style="width:100%">
       </div>
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
         <p class="w3-xlarge">Boost & Data Visualization</p>
         <p class="w3-content w3-justify w3-text-grey">My automation skills are demonstrated in a project aimed at improving email evaluation and categorization. I extract, analyze, and categorize emails, creating a dropdown menu for email categories based on subject keywords and sorting emails by date and category.
 
@@ -337,10 +357,10 @@ This project highlights my ability to handle complex data, automate office tasks
 
 </br></br></br>
     <div class="w3-row-padding">
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-down" data-aos-once="false" data-aos-duration="2000">
       <img id="profilpicture" src="./assets/src/process.png" style="width:100%">
       </div>
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
         <p class="w3-xlarge">Onboarding & Integration</p>
         <p class="w3-content w3-justify w3-text-grey">The project aims to develop an OnBoarding app to support new employees during their orientation phase.
 
@@ -363,10 +383,10 @@ Equipped with these tools, the OnBoarding app will become an essential part of t
 
 
     <div class="w3-row-padding">
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-down" data-aos-once="false" data-aos-duration="2000">
       <img id="profilpicture" src="./assets/src/automation_pic_colored_1.png" style="width:100%">
       </div>
-      <div class="w3-half">
+      <div class="w3-half" data-aos="fade-up" data-aos-once="false" data-aos-duration="2000">
         <p class="w3-xlarge">Enhancement & Data Accuracy</p>
         <p class="w3-content w3-justify w3-text-grey">I analyzed the export file from the manufacturer's tool and adjusted the macro I had previously developed for this internal client.
 
@@ -394,11 +414,11 @@ These measures have not only increased efficiency but also improved the accuracy
 
 </br></br></br>
 
-        <div class="container mx-auto" id="contact">
+        <div class="container mx-auto" id="contact" style="padding-top: 200px;" data-aos="zoom-in" data-aos-once="false" data-aos-duration="2000">
             <div class="max-w-md mx-auto my-10 bg-zinc-900 p-5 rounded-md shadow-sm">
                 <div class="text-center">
-                    <h1 class="my-3 text-3xl font-semibold text-gray-500">Contact Me</h1>
-                    <p class="text-gray-400">Fill up the form below to send me a message.</p>
+                    <h1 class="my-3 text-3xl font-semibold text-gray-500">Request Access to My Detailed Resume</h1>
+                    <p class="text-gray-400">Fill up the form below to send me a request.</p>
                 </div>
                 <div class="m-7">
                     <form action="https://api.web3forms.com/submit" method="POST" id="form">
@@ -420,7 +440,7 @@ These measures have not only increased efficiency but also improved the accuracy
                         </div>
                         <div class="mb-6">
                             <button type="submit" class="w-full bg-stone-600 text-white py-4 px-4 rounded-sm hover:bg-blue-500 focus:outline-none">
-                                Send Message
+                                Send Request
                             </button>
                         </div>
                         <p class="text-base text-center text-gray-400" id="result"></p>
@@ -492,6 +512,10 @@ by Christos Tsiparidis</p>
 
 
     </script>
-    <script src="./emailForm.js"></script>    
+    <script src="./emailForm.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>    
 </body>
 </html>

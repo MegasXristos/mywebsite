@@ -84,3 +84,30 @@
   transition: 0s
 }
 
+#elementEl {
+    display: inline;
+    font-family: Arial, sans-serif;
+    font-size: 2em; /* Adjust to your preferred size */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black; /* Cursor effect */
+}
+
+#elementEl::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+#elementEl_1::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
