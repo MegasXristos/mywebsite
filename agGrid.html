@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Christos Tsiparidis - Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- AG Grid Styles for Dark Theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@32.1.0/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ag-grid-community@32.1.0/styles/ag-theme-alpine-dark.css" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        #myGrid {
+            height: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+        .header {
+            text-align: center;
+            margin: 20px;
+        }
+        .header h2 {
+            color: #e0e0e0;
+        }
+        .header hr {
+            border: 0;
+            height: 1px;
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Projects Section with AG Grid -->
+    <div class="header">
+        <h2>My Projects</h2>
+        <hr style="width:200px; margin:auto;">
+
+    </div>
+    <div id="myGrid" class="ag-theme-alpine-dark"></div>
+
+    <!-- AG Grid Script -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community@32.1.0/dist/ag-grid-community.min.js"></script>
+    
+    <!--<script>
+        // Define column definitions
+        const columnDefs = [
+            { headerName: "Project Name", field: "projectName" },
+            { headerName: "Description", field: "description" },
+            { headerName: "Skills Used", field: "skills" },
+            { headerName: "Date", field: "date" }
+        ];
+
+        // Define row data
+        const rowData = [
+            { projectName: "Portfolio Website", description: "A personal portfolio website to showcase my skills.", skills: "HTML, CSS, JavaScript", date: "2024-03-15" },
+            { projectName: "E-commerce Platform", description: "A full-featured e-commerce platform with payment integration.", skills: "React, Node.js, MongoDB", date: "2023-11-20" },
+            { projectName: "Task Manager", description: "A task management app with real-time collaboration.", skills: "Vue.js, Firebase", date: "2023-08-30" }
+        ];
+
+        // Grid options
+        const gridOptions = {
+            columnDefs: columnDefs,
+            rowData: rowData
+        };
+
+        // Initialize the grid
+        document.addEventListener('DOMContentLoaded', function() {
+            const eGridDiv = document.querySelector('#myGrid');
+            if (eGridDiv) {
+                new agGrid.Grid(eGridDiv, gridOptions);
+                console.log('AG Grid has been initialized');
+            } else {
+                console.error('Failed to find the #myGrid element');
+            }
+        });
+    </script>
+    -->
+    <script src="./table.js"></script>
+</body>
+</html>
