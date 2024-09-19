@@ -11,16 +11,18 @@
   background-color: #606568;
   border-radius: 6px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   color: #000000;
   padding: 5px;
-  width: 80px;
+  width: 70px;
   height: 30px;
-  text-align: center;
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  margin-left: 12px;          /* Adjust this value to move the button right */
 }
 
 .button:hover {background-color: #989898}
@@ -45,21 +47,24 @@
   transition: 0s
 }
 
+
 .button2{
   position: relative;
   background-color: #606568;
   border-radius: 6px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   color: #000000;
   padding: 5px;
-  width: 200px;
+  width: 70px;
   height: 30px;
-  text-align: center;
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
   transition-duration: 0.4s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  margin-left: 12px;          /* Adjust this value to move the button right */
 }
 
 .button2:hover {background-color: #989898}
